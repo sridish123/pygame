@@ -54,6 +54,17 @@ jobs:
         - PYTHON_EXE=python3
       services:
         - docker
+    - os: linux
+      arch: arm64
+      python: 3.7
+      name: manylinux arm64 python3.4-3.9.
+      env:
+        - MANYLINUX_WHL=yes
+        - UPLOAD_WHL_PYPI=yes
+        - GITHUB_UPLOAD=yes
+        - PYTHON_EXE=python3
+      services:
+        - docker
     - os: osx
       language: shell
       env:
